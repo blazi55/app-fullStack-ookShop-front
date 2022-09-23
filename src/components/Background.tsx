@@ -13,13 +13,21 @@ export interface BackgroundProps {
 
 export const Background: FC<BackgroundProps> = (props: BackgroundProps) => {
     const [count, setCount] = useState(0);
-    const[books, setBooks] = useState([])
+    const[books, setBooks] = useState([]);
 
     const nameAdd = "Add to box";
     const nameDelete = "Remove from box";
 
     useEffect(() => {
-      fetch("http://localhost:8080/book/books")
+      fetch("http://localhost:8080/bookOokShop/books", {
+        method: "GET",
+        headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'http://localhost:8080/bookOokShop/books',
+        'Access-Control-Request-Method': 'GET',
+        'Access-Control-Allow-Headers': 'Content-Type'
+      }
+      })
       .then(res => {
         return res.json();
       }).then(data => {
@@ -27,6 +35,21 @@ export const Background: FC<BackgroundProps> = (props: BackgroundProps) => {
         console.log(data)
       });
     }/*mozna dodac []*/);
+
+    // useEffect(() => {
+    //   fetch("http://localhost:8080/student/all", {
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'Access-Control-Allow-Origin': 'http://localhost:8080/student'
+    //   },
+    //   method: "GET",
+    // })
+    //   .then(res => {
+    //     return res.json();
+    //   }).then(data => {
+    //     setStudent(data);
+    //   });
+    // }/*mozna dodac []*/);
 
     return (
         <div className="block">
@@ -43,7 +66,7 @@ export const Background: FC<BackgroundProps> = (props: BackgroundProps) => {
                     <ButtonInColum name={nameDelete} onClick={() => { setCount(count - 1); } }/>
                 </div>
                 {books.map(book => (
-                    <Book book={book}/>
+                  <Book book={book}/>
                 ))}
             </div>
         </div>

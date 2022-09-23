@@ -5,7 +5,6 @@ import { FirstPage } from './components/FirstPage';
 import { SecondPage } from './components/SecondPage';
 import { StartPage } from './components/StartPage';
 import './components/App.css'
-import { LoginPage } from './components/LoginPage';
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<StartPage/>} />
-          <Route path="/loginPage" element={<LoginPage/>} />
           <Route path="/main_page" element={<FirstPage/>} />
         </Routes>
       </BrowserRouter>

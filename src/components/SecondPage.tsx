@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import { Background } from "./Background";
 import './App.css'
 
 export interface SecondPageProps {

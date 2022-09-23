@@ -8,17 +8,21 @@ export interface BookProps {
 
 export const Book: FC<BookProps> = (props: BookProps) => {
     const [count, setCount] = useState(0);
-    const nameAdd = "Add to box";
-    const nameDelete = "Remove from box";
+    const nameAdd = "Add book";
+    const nameDelete = "Remove book";
 
     return (
         <div className="bookBlock">
             {props.book.name}
             <div className="photo"></div>
             <div className="bookFloorBlock">
-                <div>{props.book.price}</div>
-                <ButtonInBook name={nameAdd} onClick={() => { setCount(count + 1); } }/>
-                <ButtonInBook name={nameDelete} onClick={() => { setCount(count - 1); } }/>
+                <div className="book_price">
+                    Cena: {props.book.price} zł
+                </div>
+                <div className="book_button_place">
+                    <ButtonInBook name={nameAdd} onClick={() => { setCount(count + 1); } }/>
+                    <ButtonInBook name={nameDelete} onClick={() => { setCount(count - 1); } }/>
+                </div>
             </div>
         </div>
     )

@@ -6,6 +6,7 @@ import { Book } from "./Book";
 import {ButtonInColum} from './ButtonInColum';
 import { Test } from "./Test";
 import './App.css'
+import { Headline } from "./Headline";
 
 export interface BackgroundProps {
 
@@ -53,21 +54,23 @@ export const Background: FC<BackgroundProps> = (props: BackgroundProps) => {
 
     return (
         <div className="block">
-            
             <div className="headline">
                 <div className="buttonInHeadline" >
                     <Link className="linkToMyAccount" to ="/my_account">My Profile</Link>
                 </div>
                 <BinButton count={count}/>
+                <Headline/>
             </div>
             <div className="mainPage">
                 <div className="column">
                     <ButtonInColum name={nameAdd} onClick={() => { setCount(count + 1); } }/>
                     <ButtonInColum name={nameDelete} onClick={() => { setCount(count - 1); } }/>
                 </div>
-                {books.map(book => (
-                  <Book book={book}/>
-                ))}
+                <div className="block_book">
+                  {books.map(book => (
+                    <Book book={book}/>
+                  ))}
+                </div>
             </div>
         </div>
       ); 

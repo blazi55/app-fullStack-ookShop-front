@@ -10,10 +10,8 @@ export interface ButtonInBookProps {
 export const ButtonInBook: FC<ButtonInBookProps> = (props: ButtonInBookProps) => {
 
     return (
-        <>
-            <div className="buttonInBook" onClick={props.onClick}>
-                {props.name}
-            </div>
-        </>
+        <div className="buttonInBook" onClick={props.onClick}>
+            {props.name}
+        </div>
       ); 
 }

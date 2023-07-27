@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
-import { FC, useState } from "react";
-import { Link } from "react-router-dom";
-import { BinButton } from './BinButton';
-import { Book } from "./Book";
+import React, {FC, useEffect, useState} from "react";
+import {Link} from "react-router-dom";
+import {BinButton} from './BinButton';
+import {Book} from "./Book";
 import {ButtonInColum} from './ButtonInColum';
-import { Test } from "./Test";
 import './App.css'
-import { Headline } from "./Headline";
+import {Headline} from "./Headline";
 
 export interface BackgroundProps {
 

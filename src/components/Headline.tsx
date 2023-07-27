@@ -1,8 +1,6 @@
-import { FC } from "react";
-import { BinButton } from "./BinButton";
+import {FC, useState} from "react";
 import './App.css'
-import { TextField, Button, Paper } from "@mui/material";
-import {useState, useEffect} from 'react';
+import {Button, Paper, TextField} from "@mui/material";
 
 export interface HeadlineProps {
 

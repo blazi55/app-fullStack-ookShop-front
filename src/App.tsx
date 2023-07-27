@@ -1,10 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './components/App.css';
-import { FirstPage } from './components/FirstPage';
-import { SecondPage } from './components/SecondPage';
-import { StartPage } from './components/StartPage';
-import './components/App.css'
+import {FirstPage} from './components/FirstPage';
+import {StartPage} from './components/StartPage';
 
 function App() {
   return (

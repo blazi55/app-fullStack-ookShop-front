@@ -1,5 +1,5 @@
-import { FC, useState } from "react"
-import { ButtonInBook } from "./ButtonInBook";
+import {FC, useState} from "react"
+import {ButtonInBook} from "./ButtonInBook";
 import './App.css'
 
 export interface BookProps {

@@ -1,8 +1,6 @@
-
 import './App.css'
-import React from "react";
-import { FC } from "react";
-import { Background } from "./Background";
+import React, {FC} from "react";
+import {Background} from "./Background";
 
 export interface FirstPageProps {
     
